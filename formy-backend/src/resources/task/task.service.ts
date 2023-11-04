@@ -22,11 +22,18 @@ export class TaskService {
     return this.repository.findOne(id);
   }
 
+  async complete(id: string) {
+    const task = await this.repository.findOne(id);
+    return this.repository.update(id, { completed: !task.completed });
+  }
+
   async create(data: TaskCreate) {
-    const { name, date } = data;
+    const { name, description, date } = data;
 
     const notification = await this.notification.create({
-      message: `A sua tarefa: ${name} esta agendada para ${date}`,
+      title: name,
+      message: description || `Esta no momento da sua tarefa: ${name}`,
+      date,
       cronDate: dateToCronTime(date),
     });
 
@@ -36,7 +43,7 @@ export class TaskService {
   }
 
   async update(id: string, data: TaskUpdate) {
-    const { name, date } = data;
+    const { name, description, date } = data;
     const task = await this.repository.findOne(id);
 
     if (!task) {
@@ -45,7 +52,9 @@ export class TaskService {
 
     if ((date && date != task.date) || (name && name != task.name)) {
       this.notification.update(task.notificationId, {
-        message: `A sua tarefa: ${name} esta agendada para ${date}`,
+        title: name,
+        message: description || `Esta no momento da sua tarefa: ${name}`,
+        date,
         cronDate: dateToCronTime(date),
       });
     }

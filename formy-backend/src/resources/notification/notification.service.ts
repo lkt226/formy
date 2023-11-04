@@ -23,7 +23,6 @@ export class NotificationService {
 
   async create(data: NotificationCreate) {
     const notification = await this.repository.create(data);
-
     this.cronJob.create(notification);
 
     return notification;

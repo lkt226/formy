@@ -24,9 +24,9 @@ export class TaskController {
     return this.taskService.findOne(id);
   }
 
-  @Get('complete/:id')
+  @Put(':id/complete/')
   complete(@Param('id') id: string) {
-    return this.taskService.update(id, { completed: true });
+    return this.taskService.complete(id);
   }
 
   @Post()

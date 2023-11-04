@@ -19,6 +19,8 @@ export class PrismaNotificationRepository implements NotificationRepository {
   async create(data: NotificationCreate) {
     const notification: Notification = {
       id: this.items.length.toString(),
+      title: data.title,
+      date: data.date,
       cronDate: data.cronDate,
       message: data.message,
       createdAt: new Date(),

@@ -14,7 +14,7 @@ export type TaskCreate = {
   name: string;
   description?: string | null;
   completed?: boolean;
-  date: Date | string;
+  date: Date;
   createdAt?: Date | string;
   updatedAt?: Date | string;
 };
@@ -24,7 +24,7 @@ export type TaskUpdate = {
   name?: string;
   description?: string | null;
   completed?: boolean;
-  date?: Date | string;
+  date?: Date;
   createdAt?: Date | string;
   updatedAt?: Date | string;
 };

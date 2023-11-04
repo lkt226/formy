@@ -27,8 +27,10 @@ model Task {
 }
 
 model Notification {
-  id       String @id @default(uuid())
+  id       String   @id @default(uuid())
+  title    String
   message  String
+  date     DateTime
   cronDate String
 
   createdAt DateTime @default(now())

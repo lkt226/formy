@@ -1,0 +1,26 @@
+.root {
+  @apply flex flex-col gap-5;
+
+  .header {
+    @apply flex items-center gap-2;
+  }
+  
+  .body {
+    @apply flex flex-col gap-2;
+  
+    .date-hour {
+      @apply grid grid-cols-2 gap-2;
+    }
+
+    label {
+      @apply flex flex-col gap-1;
+    }
+  }
+  
+  .footer {
+  
+    button {
+      @apply w-full;
+    }
+  }
+}

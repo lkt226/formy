@@ -16,10 +16,13 @@ export const taskProviders = [
 
 @Module({
   imports: [],
-  controllers: [TaskController],
+  controllers: [
+    TaskController
+  ],
   providers: [
     PrismaService, 
     ...taskProviders, 
-    ...notificationProviders],
+    ...notificationProviders
+  ],
 })
 export class TaskModule {}

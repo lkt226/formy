@@ -1,0 +1,8 @@
+.destructive-card {
+  @apply flex gap-2 items-center;
+  @apply max-w-fit;
+
+  .item {
+    @apply flex gap-1;
+  }
+}

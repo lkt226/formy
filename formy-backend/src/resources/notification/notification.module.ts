@@ -17,11 +17,12 @@ export const notificationProviders = [
 
 @Module({
   imports: [],
-  controllers: [NotificationController],
+  controllers: [
+    NotificationController
+  ],
   providers: [
     PrismaService, 
     ...notificationProviders
-  ],
-  exports: [NotificationService, CronJobService],
+  ]
 })
 export class NotificationModule {}

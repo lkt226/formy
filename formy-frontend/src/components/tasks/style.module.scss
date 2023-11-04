@@ -1,0 +1,42 @@
+.root {
+  @apply w-full max-w-sm;
+  @apply flex flex-col gap-2;
+  @apply p-2;
+
+  .item {
+    @apply bg-primary-foreground;
+    @apply flex flex-col gap-1;
+    @apply px-3 py-2;
+
+    >* {
+      @apply p-0;
+    }
+
+    .header {
+      @apply flex-row justify-between items-center;
+
+      .hover-card {
+        @apply flex flex-col gap-1;
+        @apply max-w-fit;
+        
+        .hover-card-item {
+          @apply flex gap-2 items-center justify-start;
+        }
+      }
+    }
+
+    .footer {
+      @apply flex-row;
+      @apply text-xs;
+      @apply pt-2;
+    }
+
+    &[data-completed="true"] {
+      @apply line-through;
+    }
+  }
+
+  .new-task-button {
+    @apply w-full;
+  }
+}

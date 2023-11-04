@@ -26,6 +26,7 @@ export class PrismaNotificationRepository implements NotificationRepository {
   }
 
   async update(id: string, data: NotificationUpdate) {
+    console.log(id, data);
     return await prisma.notification.update({
       where: {
         id: id,
