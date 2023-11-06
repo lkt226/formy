@@ -1,0 +1,18 @@
+.label {
+  @apply flex flex-col gap-1;
+
+  .text {
+    @apply text-base; 
+  }
+
+  .caption {
+    @apply text-gray-400 text-sm;
+  }
+
+  &[aria-required="true"] {
+    .text::after {
+      content: ' *';
+      @apply text-sm text-red-500;
+    }
+  }
+}

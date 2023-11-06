@@ -1,0 +1,23 @@
+.body {
+  @apply flex flex-col gap-2;
+
+  .name-category {
+    @apply grid grid-cols-5 gap-2;
+
+    label {
+      @apply col-span-2;
+      
+      &:first-child {
+        @apply col-span-3;
+      }
+    }
+  }
+
+  .date-hour {
+    @apply grid grid-cols-2 gap-2;
+  }
+
+  .priority {
+    @apply flex justify-between px-5;
+  }
+}

@@ -1,4 +1,7 @@
+import css from './style.module.scss'
 import './globals.css'
+
+import { Header } from '@/components/header'
 
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
@@ -22,7 +25,11 @@ export default function RootLayout({
     <ReduxProvider>
       <Controller />
       <html lang="pt-BR">
-        <body className={inter.className}>
+        <body className={`${inter.className} ${css["body"]}`}>
+          <Header.Root>
+            <Header.Logo />
+          </Header.Root>
+
           {children}
         </body>
       </html>

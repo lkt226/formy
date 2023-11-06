@@ -1,9 +1,9 @@
 import { Root } from './partials/Root'
 import { Item } from './partials/Item'
-import { Post } from './partials/POST'
+import { ModalNewTask } from './partials/ModalNewTask'
 
 export const Task = {
   Root,
   Item,
-  Post
+  ModalNewTask
 }

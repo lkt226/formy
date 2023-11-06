@@ -50,7 +50,11 @@ export class TaskService {
       throw new Error('Task not found');
     }
 
-    if ((date && date != task.date) || (name && name != task.name)) {
+    if (
+      (date && date != task.date) ||
+      (name && name != task.name) ||
+      (description && description != task.description)
+    ) {
       this.notification.update(task.notificationId, {
         title: name,
         message: description || `Esta no momento da sua tarefa: ${name}`,

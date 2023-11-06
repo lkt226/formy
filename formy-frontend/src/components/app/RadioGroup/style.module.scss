@@ -1,0 +1,20 @@
+.radio {
+  @apply font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+  @apply flex flex-col gap-1;
+
+  .text {
+    @apply text-base;
+
+    &[aria-required="true"]::after {
+      content: ' *';
+      @apply text-sm text-red-500;
+    }
+  }
+
+  .group {
+    .item {
+      @apply flex-row-reverse items-center gap-2;
+      @apply cursor-pointer;
+    }
+  }
+}

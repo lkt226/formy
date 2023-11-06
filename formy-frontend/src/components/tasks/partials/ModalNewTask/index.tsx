@@ -13,7 +13,7 @@ import { service } from '@/services'
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
 }
 
-export const Post = ({...rest}: Props) => {
+export const ModalNewTask = ({...rest}: Props) => {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
 

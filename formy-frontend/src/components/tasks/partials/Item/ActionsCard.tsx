@@ -1,7 +1,7 @@
 "use client"
 
 import css from '../../style.module.scss'
-import { Put } from '../PUT'
+import { ModalUpdateTask } from '../ModalUpdateTask'
 
 import { CheckSquare, MoreHorizontal, Trash2 } from 'lucide-react'
 
@@ -39,7 +39,7 @@ export const ActionsCard = ({task}: Props) => {
           <span>Terminar tarefa</span>
         </Button>
 
-        <Put task={task} />
+        <ModalUpdateTask task={task} />
         
         <App.DestructiveCard onClick={handleDelete}>
           <Button variant={'ghost'} className={css["hover-card-item"]}>

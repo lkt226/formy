@@ -1,0 +1,4 @@
+.body {
+  @apply min-h-screen grid;
+  grid-template-rows: auto 1fr auto;
+}

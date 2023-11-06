@@ -18,7 +18,7 @@ interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   task: TaskGet
 }
 
-export const Put = ({task, ...rest}: Props) => {
+export const ModalUpdateTask = ({task, ...rest}: Props) => {
   const item = {
     name: task.name,
     description: task.description,

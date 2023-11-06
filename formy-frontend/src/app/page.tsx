@@ -13,8 +13,11 @@ export default function Home() {
         { Object.values(tasks).map(task => (
           <Task.Item key={task.id} task={task} />
         ))}
-        <Task.Post />
+        <Task.ModalNewTask />
       </Task.Root>
+      <div className="flex justify-center items-center w-full">
+        <h1>Não implementado</h1>
+      </div>
     </main>
   )
 }
